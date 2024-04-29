@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Some page</title>
+  </head>
+  <body>
+    <div id="chat-widget-container"></div>
+    <script src="./build/static/js/main.76965743.js"></script>
+    <script>
+      chatWidget.mountChatWidget('chat-widget-container', {
+        key: 'qynyhmqzz0echnshxsil',
+        wsHost: 'localhost',
+        wsPort: 8081,
+        reverbSchema: 'http',
+        apiUrl: 'http://localhost:8000/api',
+      })
+    </script>
+  </body>
+</html>

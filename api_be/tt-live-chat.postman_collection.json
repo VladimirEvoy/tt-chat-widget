@@ -1,0 +1,1374 @@
+{
+	"info": {
+		"_postman_id": "cf1799d5-75b9-4e53-bb4b-30973a90b78f",
+		"name": "tt-live-chat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1608467",
+		"_collection_link": "https://crimson-zodiac-782275.postman.co/workspace/Workspace~dd2483fc-620d-4cf0-a93c-3588aa27065d/collection/1608467-cf1799d5-75b9-4e53-bb4b-30973a90b78f?action=share&source=collection_link&creator=1608467"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/admin/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "admin@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/admin/login",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"admin",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Apr 2024 19:37:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"1|geRZh7EOMEZH2JTobK5685sb9xjo8W88k3FuBL755a031af9\",\n    \"token_type\": \"Bearer\"\n}"
+						},
+						{
+							"name": "422",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "admin@gmail.coma",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/admin/login",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"admin",
+										"login"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Apr 2024 19:38:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The provided credentials are incorrect.\",\n    \"errors\": {\n        \"email\": [\n            \"The provided credentials are incorrect.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}/backoffice/logout",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"backoffice",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{URL}}/backoffice/logout",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"backoffice",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Apr 2024 21:34:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully logged out\"\n}"
+						}
+					]
+				},
+				{
+					"name": "chats",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/backoffice/chats",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"backoffice",
+								"chats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get chat by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/backoffice/chats/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"backoffice",
+								"chats",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create message",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "message",
+									"value": "testeawdawdad",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/backoffice/chats/8/messages",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"backoffice",
+								"chats",
+								"8",
+								"messages"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "message",
+											"value": "testeawdawdad",
+											"type": "text"
+										},
+										{
+											"key": "sender_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "sender_type",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/chats/1/messages",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"chats",
+										"1",
+										"messages"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Apr 2024 21:17:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 29,\n        \"chat_id\": 1,\n        \"user_id\": null,\n        \"message\": \"testeawdawdad\",\n        \"type\": \"user\",\n        \"created_at\": \"2024-04-26 21:17:14\",\n        \"updated_at\": \"2024-04-26 21:17:14\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get one message by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "message",
+									"value": "testeawdawdad",
+									"type": "text"
+								},
+								{
+									"key": "sender_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sender_type",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/backoffice/messages/5",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"backoffice",
+								"messages",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "message",
+											"value": "testeawdawdad",
+											"type": "text"
+										},
+										{
+											"key": "sender_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "sender_type",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/messages/4",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"messages",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Apr 2024 21:20:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"chat_id\": 1,\n        \"user_id\": null,\n        \"message\": \"test\",\n        \"type\": \"user\",\n        \"sender\": {\n            \"id\": 1,\n            \"name\": \"Norayr\",\n            \"email\": \"baghdasarov94@gmail.com\"\n        },\n        \"created_at\": \"2024-04-26 20:44:18\",\n        \"updated_at\": \"2024-04-26 20:44:18\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get messages by chat ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}/backoffice/chats/8/messages",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"backoffice",
+								"chats",
+								"8",
+								"messages"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{URL}}/chats/1/messages",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"chats",
+										"1",
+										"messages"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Apr 2024 21:08:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:43:22\",\n            \"updated_at\": \"2024-04-26 20:43:22\"\n        },\n        {\n            \"id\": 2,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:43:56\",\n            \"updated_at\": \"2024-04-26 20:43:56\"\n        },\n        {\n            \"id\": 3,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:44:10\",\n            \"updated_at\": \"2024-04-26 20:44:10\"\n        },\n        {\n            \"id\": 4,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:44:18\",\n            \"updated_at\": \"2024-04-26 20:44:18\"\n        },\n        {\n            \"id\": 5,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:44:23\",\n            \"updated_at\": \"2024-04-26 20:44:23\"\n        },\n        {\n            \"id\": 6,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:44:45\",\n            \"updated_at\": \"2024-04-26 20:44:45\"\n        },\n        {\n            \"id\": 7,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:45:23\",\n            \"updated_at\": \"2024-04-26 20:45:23\"\n        },\n        {\n            \"id\": 8,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:45:35\",\n            \"updated_at\": \"2024-04-26 20:45:35\"\n        },\n        {\n            \"id\": 9,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:45:43\",\n            \"updated_at\": \"2024-04-26 20:45:43\"\n        },\n        {\n            \"id\": 10,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:46:03\",\n            \"updated_at\": \"2024-04-26 20:46:03\"\n        },\n        {\n            \"id\": 11,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:46:12\",\n            \"updated_at\": \"2024-04-26 20:46:12\"\n        },\n        {\n            \"id\": 12,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:46:21\",\n            \"updated_at\": \"2024-04-26 20:46:21\"\n        },\n        {\n            \"id\": 13,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:48:01\",\n            \"updated_at\": \"2024-04-26 20:48:01\"\n        },\n        {\n            \"id\": 14,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:49:15\",\n            \"updated_at\": \"2024-04-26 20:49:15\"\n        },\n        {\n            \"id\": 15,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:50:00\",\n            \"updated_at\": \"2024-04-26 20:50:00\"\n        },\n        {\n            \"id\": 16,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:54:28\",\n            \"updated_at\": \"2024-04-26 20:54:28\"\n        },\n        {\n            \"id\": 17,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:55:10\",\n            \"updated_at\": \"2024-04-26 20:55:10\"\n        },\n        {\n            \"id\": 18,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:55:21\",\n            \"updated_at\": \"2024-04-26 20:55:21\"\n        },\n        {\n            \"id\": 19,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:55:35\",\n            \"updated_at\": \"2024-04-26 20:55:35\"\n        },\n        {\n            \"id\": 20,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:56:12\",\n            \"updated_at\": \"2024-04-26 20:56:12\"\n        },\n        {\n            \"id\": 21,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:56:24\",\n            \"updated_at\": \"2024-04-26 20:56:24\"\n        },\n        {\n            \"id\": 22,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:56:41\",\n            \"updated_at\": \"2024-04-26 20:56:41\"\n        },\n        {\n            \"id\": 23,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:56:54\",\n            \"updated_at\": \"2024-04-26 20:56:54\"\n        },\n        {\n            \"id\": 24,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:57:32\",\n            \"updated_at\": \"2024-04-26 20:57:32\"\n        },\n        {\n            \"id\": 25,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 21:01:14\",\n            \"updated_at\": \"2024-04-26 21:01:14\"\n        },\n        {\n            \"id\": 26,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 21:02:08\",\n            \"updated_at\": \"2024-04-26 21:02:08\"\n        },\n        {\n            \"id\": 27,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 21:04:43\",\n            \"updated_at\": \"2024-04-26 21:04:43\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "create chat",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Norayr",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "baghdasarov94@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/chats",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"chats"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Norayr",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "baghdasarov94@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "test",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/chats",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"chats"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8088"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 28 Apr 2024 12:50:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 14,\n        \"client_id\": 1,\n        \"admin_id\": null,\n        \"status\": null,\n        \"started_at\": \"2024-04-28T12:50:01.727965Z\",\n        \"ended_at\": null,\n        \"messages\": [\n            {\n                \"id\": 25,\n                \"chat_id\": 14,\n                \"message\": \"test\",\n                \"type\": \"user\",\n                \"sender\": {\n                    \"id\": 1,\n                    \"name\": \"Norayr\",\n                    \"email\": \"baghdasarov94@gmail.com\"\n                },\n                \"created_at\": \"2024-04-28 12:50:01\",\n                \"updated_at\": \"2024-04-28 12:50:01\"\n            },\n            {\n                \"id\": 26,\n                \"chat_id\": 14,\n                \"message\": \"Hi, we got your message our first operator will contact you as soon as possible. Please wait...\",\n                \"type\": \"bot\",\n                \"sender\": {\n                    \"id\": 1,\n                    \"name\": \"Admin\",\n                    \"email\": \"admin@gmail.com\"\n                },\n                \"created_at\": \"2024-04-28 12:50:01\",\n                \"updated_at\": \"2024-04-28 12:50:01\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get message by chat ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}/chats/1/messages",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"chats",
+								"1",
+								"messages"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{URL}}/chats/1/messages",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"chats",
+										"1",
+										"messages"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Apr 2024 21:08:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:43:22\",\n            \"updated_at\": \"2024-04-26 20:43:22\"\n        },\n        {\n            \"id\": 2,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:43:56\",\n            \"updated_at\": \"2024-04-26 20:43:56\"\n        },\n        {\n            \"id\": 3,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:44:10\",\n            \"updated_at\": \"2024-04-26 20:44:10\"\n        },\n        {\n            \"id\": 4,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:44:18\",\n            \"updated_at\": \"2024-04-26 20:44:18\"\n        },\n        {\n            \"id\": 5,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:44:23\",\n            \"updated_at\": \"2024-04-26 20:44:23\"\n        },\n        {\n            \"id\": 6,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:44:45\",\n            \"updated_at\": \"2024-04-26 20:44:45\"\n        },\n        {\n            \"id\": 7,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:45:23\",\n            \"updated_at\": \"2024-04-26 20:45:23\"\n        },\n        {\n            \"id\": 8,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:45:35\",\n            \"updated_at\": \"2024-04-26 20:45:35\"\n        },\n        {\n            \"id\": 9,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:45:43\",\n            \"updated_at\": \"2024-04-26 20:45:43\"\n        },\n        {\n            \"id\": 10,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:46:03\",\n            \"updated_at\": \"2024-04-26 20:46:03\"\n        },\n        {\n            \"id\": 11,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:46:12\",\n            \"updated_at\": \"2024-04-26 20:46:12\"\n        },\n        {\n            \"id\": 12,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:46:21\",\n            \"updated_at\": \"2024-04-26 20:46:21\"\n        },\n        {\n            \"id\": 13,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:48:01\",\n            \"updated_at\": \"2024-04-26 20:48:01\"\n        },\n        {\n            \"id\": 14,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:49:15\",\n            \"updated_at\": \"2024-04-26 20:49:15\"\n        },\n        {\n            \"id\": 15,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:50:00\",\n            \"updated_at\": \"2024-04-26 20:50:00\"\n        },\n        {\n            \"id\": 16,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:54:28\",\n            \"updated_at\": \"2024-04-26 20:54:28\"\n        },\n        {\n            \"id\": 17,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:55:10\",\n            \"updated_at\": \"2024-04-26 20:55:10\"\n        },\n        {\n            \"id\": 18,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:55:21\",\n            \"updated_at\": \"2024-04-26 20:55:21\"\n        },\n        {\n            \"id\": 19,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:55:35\",\n            \"updated_at\": \"2024-04-26 20:55:35\"\n        },\n        {\n            \"id\": 20,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:56:12\",\n            \"updated_at\": \"2024-04-26 20:56:12\"\n        },\n        {\n            \"id\": 21,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:56:24\",\n            \"updated_at\": \"2024-04-26 20:56:24\"\n        },\n        {\n            \"id\": 22,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:56:41\",\n            \"updated_at\": \"2024-04-26 20:56:41\"\n        },\n        {\n            \"id\": 23,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:56:54\",\n            \"updated_at\": \"2024-04-26 20:56:54\"\n        },\n        {\n            \"id\": 24,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 20:57:32\",\n            \"updated_at\": \"2024-04-26 20:57:32\"\n        },\n        {\n            \"id\": 25,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 21:01:14\",\n            \"updated_at\": \"2024-04-26 21:01:14\"\n        },\n        {\n            \"id\": 26,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 21:02:08\",\n            \"updated_at\": \"2024-04-26 21:02:08\"\n        },\n        {\n            \"id\": 27,\n            \"chat_id\": 1,\n            \"user_id\": null,\n            \"message\": \"test\",\n            \"type\": \"user\",\n            \"sender\": {\n                \"id\": 1,\n                \"name\": \"Norayr\",\n                \"email\": \"baghdasarov94@gmail.com\",\n                \"created_at\": \"2024-04-26T20:41:46+00:00\",\n                \"updated_at\": \"2024-04-26T20:41:46+00:00\"\n            },\n            \"created_at\": \"2024-04-26 21:04:43\",\n            \"updated_at\": \"2024-04-26 21:04:43\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get chat by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}/chats/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"chats",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all my chats",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{URL}}/chats?client_id=1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"chats"
+							],
+							"query": [
+								{
+									"key": "client_id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create message",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "message",
+									"value": "Client",
+									"type": "text"
+								},
+								{
+									"key": "sender_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/chats/8/messages",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"chats",
+								"8",
+								"messages"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "message",
+											"value": "testeawdawdad",
+											"type": "text"
+										},
+										{
+											"key": "sender_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "sender_type",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/chats/1/messages",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"chats",
+										"1",
+										"messages"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Apr 2024 21:17:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 29,\n        \"chat_id\": 1,\n        \"user_id\": null,\n        \"message\": \"testeawdawdad\",\n        \"type\": \"user\",\n        \"created_at\": \"2024-04-26 21:17:14\",\n        \"updated_at\": \"2024-04-26 21:17:14\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get one message by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "message",
+									"value": "testeawdawdad",
+									"type": "text"
+								},
+								{
+									"key": "sender_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sender_type",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/messages/4",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"messages",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "message",
+											"value": "testeawdawdad",
+											"type": "text"
+										},
+										{
+											"key": "sender_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "sender_type",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}/messages/4",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"messages",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Apr 2024 21:20:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"chat_id\": 1,\n        \"user_id\": null,\n        \"message\": \"test\",\n        \"type\": \"user\",\n        \"sender\": {\n            \"id\": 1,\n            \"name\": \"Norayr\",\n            \"email\": \"baghdasarov94@gmail.com\"\n        },\n        \"created_at\": \"2024-04-26 20:44:18\",\n        \"updated_at\": \"2024-04-26 20:44:18\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Download messages",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/chats/1/download",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"chats",
+								"1",
+								"download"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}/chats/8/download",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"chats",
+										"8",
+										"download"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.6"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/csv; charset=UTF-8"
+								},
+								{
+									"key": "Content-Disposition",
+									"value": "attachment; filename=\"chat_history_8.csv\""
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "must-revalidate, post-check=0, pre-check=0, private"
+								},
+								{
+									"key": "Expires",
+									"value": "0"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 26 Apr 2024 23:53:43 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "\"Message ID\",\"Sender Name\",Message,\"Date Sent\"\n39,Admin,testeawdawdad,\"2024-04-26 21:48:27\"\n40,Norayr,Client,\"2024-04-26 21:48:33\"\n41,Norayr,Client,\"2024-04-26 23:42:15\"\n42,Norayr,Client,\"2024-04-26 23:43:54\"\n"
+						}
+					]
+				}
+			]
+		}
+	]
+}
